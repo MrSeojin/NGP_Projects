@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1067B9B2-719C-4494-8C8F-DA04C72C8D76}|homework3\\homework3.vcxproj|D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\homework3\\homework3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1067B9B2-719C-4494-8C8F-DA04C72C8D76}|homework3\\homework3.vcxproj|solutionrelative:homework3\\homework3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BBA306D5-FF51-4010-B686-2FC3E27368C4}|ByteOrder\\ByteOrder.vcxproj|D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\ByteOrder\\ByteOrder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BBA306D5-FF51-4010-B686-2FC3E27368C4}|ByteOrder\\ByteOrder.vcxproj|solutionrelative:ByteOrder\\ByteOrder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A10F35F-2D05-4850-974B-7808F6203940}|InitSocket\\InitSocket.vcxproj|D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\InitSocket\\InitSocket.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A10F35F-2D05-4850-974B-7808F6203940}|InitSocket\\InitSocket.vcxproj|solutionrelative:InitSocket\\InitSocket.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35BF039B-BDBD-4F26-928A-6776D807ABB9}|Server\\Server.vcxproj|D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\Server\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{35BF039B-BDBD-4F26-928A-6776D807ABB9}|Server\\Server.vcxproj|solutionrelative:Server\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 584,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +26,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ByteOrder.cpp",
               "DocumentMoniker": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\ByteOrder\\ByteOrder.cpp",
               "RelativeDocumentMoniker": "ByteOrder\\ByteOrder.cpp",
               "ToolTip": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\ByteOrder\\ByteOrder.cpp",
               "RelativeToolTip": "ByteOrder\\ByteOrder.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-21T10:05:21.704Z",
+              "WhenOpened": "2025-09-28T07:24:19.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InitSocket.cpp",
-              "DocumentMoniker": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\InitSocket\\InitSocket.cpp",
-              "RelativeDocumentMoniker": "InitSocket\\InitSocket.cpp",
-              "ToolTip": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\InitSocket\\InitSocket.cpp",
-              "RelativeToolTip": "InitSocket\\InitSocket.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "homework3.cpp",
+              "DocumentMoniker": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\homework3\\homework3.cpp",
+              "RelativeDocumentMoniker": "homework3\\homework3.cpp",
+              "ToolTip": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\homework3\\homework3.cpp*",
+              "RelativeToolTip": "homework3\\homework3.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-21T10:03:08.005Z",
+              "WhenOpened": "2025-09-28T03:20:08.89Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Server.cpp",
-              "DocumentMoniker": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\Server\\Server.cpp",
-              "RelativeDocumentMoniker": "Server\\Server.cpp",
-              "ToolTip": "D:\\school\\3_2\\NGP\\NGP_Projects\\NetworkGameProgramming_Projects\\Server\\Server.cpp",
-              "RelativeToolTip": "Server\\Server.cpp",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-21T09:55:17.89Z"
             }
           ]
         }

@@ -7,7 +7,11 @@ void GetHostEndian();
 
 int main() {
     printf("[호스트 바이트 -> 네트워크 바이트 (빅 엔디언)]\n");
-    printf("%#x -> %#x\n", x1, x2);
+    printf("%#x(%hu) -> %#x(%hu)\n", x1, x1, x2, x2);
+    printf("\n");
+
+    printf("[빅 엔디언 -> 빅엔디언]\n");
+    printf("%#x(%hu) -> %#x(%hu)\n", htons(htons(x2)), x2, htons(x2), htons(x2));
     printf("\n");
 
     printf("[호스트 바이트 정렬]\n");
