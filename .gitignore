@@ -167,4 +167,5 @@ fabric.properties
 *.iobj
 *.ipdb
 /NetworkGameProgramming_Projects/.vs
+/NetworkGameProgramming_Projects/TCPServer/x64
 *.db
