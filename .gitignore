@@ -151,3 +151,20 @@ fabric.properties
 # *.ipr
 
 # End of https://www.gitignore.io/api/python,pycharm
+*.tlog
+*.mp4
+*.exe
+*.json
+*.vsidx
+*.ipch
+*.json
+*.vcxproj
+*.pdb
+*.filters
+*.user
+*.obj
+*.recipe
+*.iobj
+*.ipdb
+/NetworkGameProgramming_Projects/.vs
+*.db
