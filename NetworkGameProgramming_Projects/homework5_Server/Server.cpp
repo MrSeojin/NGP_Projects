@@ -31,6 +31,7 @@ int main(int argc, char* argv[])
 	int addrlen;
 	int total_len{};
 	int cur_len{};
+	int P{};
 	char filename[BUFSIZE + 1];
 
 	while (1) {
@@ -41,34 +42,28 @@ int main(int argc, char* argv[])
 			err_display("accept()");
 			break;
 		}
-
-		// 접속한 클라이언트 정보 출력
 		char addr[INET_ADDRSTRLEN];
 		inet_ntop(AF_INET, &clientaddr.sin_addr, addr, sizeof(addr));
 		printf("\n[TCP 서버] 클라이언트 접속: IP 주소=%s, 포트 번호=%d\n", addr, ntohs(clientaddr.sin_port));
 
-		// 클라이언트와 데이터 통신
-		while (1) {
-			// 데이터 받기 (filename)
-			{
+//		while (1) {
+			{	// 데이터 받기 (filename)
 				int len;
 				retval = recv(client_sock, (char*)&len, sizeof(int), MSG_WAITALL);
 				if (retval == SOCKET_ERROR) {
 					err_display("recv()");
 					break;
 				}
-				else if (retval == 0)
-					break;
+				else if (retval == 0);
+//					break;
 				retval = recv(client_sock, filename, len, MSG_WAITALL);
 				if (retval == SOCKET_ERROR) {
 					err_display("recv()");
 					break;
 				}
-				else if (retval == 0)
-					break;
-				printf("total_len: %d", total_len);
+				else if (retval == 0);
+//					break;
 			}
-			
 			filename[retval] = '\0';
 			printf("[TCP/%s:%d] %s\n", addr, ntohs(clientaddr.sin_port), filename);
 
@@ -77,30 +72,24 @@ int main(int argc, char* argv[])
 				err_display("fopen()");
 				break;
 			}
-
-			// 데이터 보내기(total len)
-			{
-				printf("total_len: %d", total_len);
-				//int len;
-				//retval = recv(client_sock, (char*)&len, sizeof(int), MSG_WAITALL);
-				//if (retval == SOCKET_ERROR) {
-				//	err_display("recv()");
-				//	break;
-				//}
-				//else if (retval == 0)
-				//	break;
-				retval = recv(client_sock, (char*)&total_len, sizeof(int), MSG_WAITALL);
+			{	// 데이터 보내기(total len)
+				int len;
+				retval = recv(client_sock, (char*)&len, sizeof(int), MSG_WAITALL);
 				if (retval == SOCKET_ERROR) {
 					err_display("recv()");
 					break;
 				}
-				else if (retval == 0)
+				else if (retval == 0);
+//					break;
+				retval = recv(client_sock, (char*)&total_len, len, MSG_WAITALL);
+				if (retval == SOCKET_ERROR) {
+					err_display("recv()");
 					break;
-				printf("total_len: %d", total_len);
+				}
+				else if (retval == 0);
+//					break;
 			}
-			// 데이터 받기(file data)
-			printf("\n전송률: 0% (수신중)");
-			while (cur_len < total_len) {
+			while (cur_len < total_len) {	// 데이터 받기(file data)
 				char buf[BUFSIZE];
 				int len;
 				retval = recv(client_sock, (char*)&len, sizeof(int), MSG_WAITALL);
@@ -110,31 +99,25 @@ int main(int argc, char* argv[])
 				}
 				else if (retval == 0)
 					break;
-				printf("len: %d", len);
 				retval = recv(client_sock, buf, len, MSG_WAITALL);
 				if (retval == SOCKET_ERROR) {
 					err_display("recv()");
 					break;
 				}
-				else if (retval == 0) {
+				else if (retval == 0)
 					break;
-				}
 				fwrite(buf, 1, retval, file);
 				cur_len += retval;
-				printf("\r전송률: %d% (수신중)", (cur_len / total_len * 100));
+				printf("\r전송률: %d %% (수신중)", 100 * cur_len / total_len);
 			}
-			printf("\r전송률: %d% (수신완료)\n", (cur_len / total_len * 100));
-
+			printf("\r전송률: %d %% (수신완료)\n", 100 * cur_len / total_len);
 			fclose(file);
-		}
-		// 소켓 닫기
+//		}
 		closesocket(client_sock);
 		printf("[TCP 서버] 클라이언트 종료: IP 주소=%s, 포트번호=%d\n", addr, ntohs(clientaddr.sin_port));
 	}
-	// 소켓 닫기
 	closesocket(listen_sock);
 
-	//윈속 종료
 	WSACleanup();
 	return 0;
 }

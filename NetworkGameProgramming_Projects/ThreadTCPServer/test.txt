@@ -1,0 +1,14 @@
+ID3D12RootSignature *pd3dGraphicsRootSignature = NULL;
+
+D3D12_DESCRIPTOR_RANGE pd3dDescriptorRanges[2];
+
+pd3dDescriptorRanges[1].RangeType = D3D12_DESCRIPTOR_RANGE_TYPE_SRV;
+pd3dDescriptorRanges[1].NumDescriptors = 1;
+pd3dDescriptorRanges[1].BaseShaderRegister = 1;
+pd3dDescriptorRanges[1].RegisterSpace = 0;
+pd3dDescriptorRanges[1].OffsetInDescriptorsFromTableStart = 0;
+
+D3D12_ROOT_PARAMETTER pd3dRootParameters[4];
+
+pd3dRootParameters[3].ParameterType = D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE;
+

@@ -2,7 +2,6 @@
 #include <fstream>
 #include "..\Common.h"
 
-char* SERVERIP = (char*)"127.0.0.1";
 #define SERVERPORT 9000
 #define BUFSIZE 50
 
@@ -17,6 +16,11 @@ int main(int argc, char* argv[])
 	SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
 	if (sock == INVALID_SOCKET) err_quit("socket()");
 
+//	const char* SERVERIP = argv[1];
+	const char* SERVERIP = "127.0.0.1";
+//	const char* filename = argv[2];
+	const char* filename = "video.mp4";
+
 	struct sockaddr_in serveraddr;
 	memset(&serveraddr, 0, sizeof(serveraddr));
 	serveraddr.sin_family = AF_INET;
@@ -27,7 +31,6 @@ int main(int argc, char* argv[])
 
 	// 데이터 통신에 사용할 변수
 	char filedata[BUFSIZE]{};
-	const char* filename = argv[1];
 	int cur_len{};
 
 	// 데이터 보내기(fileName)
@@ -50,12 +53,7 @@ int main(int argc, char* argv[])
 
 	// 데이터 보내기(total len)
 	{
-		int len = sizeof(int);
-		retval = send(sock, (char*)&len, sizeof(int), 0);
-		if (retval == SOCKET_ERROR) {
-			err_display("send()");
-		}
-		retval = send(sock, (char*)&total_len, len, 0);
+		retval = send(sock, (char*)&total_len, sizeof(int), 0);
 		if (retval == SOCKET_ERROR) {
 			err_display("send()");
 		}
