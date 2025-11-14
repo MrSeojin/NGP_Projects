@@ -3,7 +3,6 @@
 #define SERVERPORT 9000
 #define BUFSIZE 512
 
-
 int next_line;
 CRITICAL_SECTION cs;
 
@@ -104,6 +103,8 @@ DWORD WINAPI ProcessClient(LPVOID arg)
 		printf("전송률: %d %% (수신완료)", 100 * cur_len / total_len);
 		LeaveCriticalSection(&cs);
 		fclose(file);
+		
+		break;
 	}
 
 	closesocket(client_sock);
